@@ -27,6 +27,7 @@ main {
   width: 1280px;
   height: 680px;
   text-align: center;
+  background-color: white;
 }
 
 h1 {
