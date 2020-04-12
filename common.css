@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background-color: gainsboro;
+}
+
+main {
+  font-family: 'Raleway', sans-serif;
+  width: 1280px;
+  height: 720px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 15px 0px;
+  color: brown;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 15px 0px;
+  color: #111111;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+  font-size: 20px;
+  margin: 10px 0px;
+  color: brown;
+}
