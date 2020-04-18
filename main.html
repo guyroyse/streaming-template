@@ -4,7 +4,41 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="common.css">
 
+    <script>
+      document.addEventListener('DOMContentLoaded', event => {
+
+        function wobbleHead() {
+
+          let guyHead = document.querySelector('#guy-head')
+
+          guyHead.classList.remove('guy-head-bobble')
+          setTimeout(() => {
+            guyHead.classList.add('guy-head-bobble')
+          }, 10)
+
+          let minutes = Math.floor((Math.random() * 5) + 1)
+
+          setTimeout(wobbleHead, minutes * 60 * 1000)
+
+        }
+
+        wobbleHead()
+      })
+    </script>
+
     <style>
+
+      @keyframes BOBBLE {
+        0%  { transform:rotate(0deg) }
+        25% { transform:rotate(5deg) }
+        75% { transform:rotate(-6deg) }
+        100% {transform:rotate(0deg)}
+      }
+
+      .guy-head-bobble {
+        animation: BOBBLE 1.5s linear 3;
+      }
+
       main {
         background-color: rgba(0,0,0,0);
         border-width: 1px;
