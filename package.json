@@ -4,5 +4,8 @@
   "description": "Guy's OBS Browser Overlays",
   "author": "Guy Royse <guy@guyroyse.com",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
