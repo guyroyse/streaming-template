@@ -1,0 +1,8 @@
+{
+  "name": "guys-obs-browser-overlay",
+  "version": "1.0.0",
+  "description": "Guy's OBS Browser Overlays",
+  "author": "Guy Royse <guy@guyroyse.com",
+  "license": "MIT",
+  "private": true
+}
