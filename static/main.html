@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="common.css">
 
     <script>
-      document.addEventListener('DOMContentLoaded', event => {
+      document.addEventListener('DOMContentLoaded', async event => {
 
         function wobbleHead() {
 
@@ -23,6 +23,13 @@
         }
 
         wobbleHead()
+
+        // update the title and subtitle
+        let response = await fetch('/api/stream-info')
+        let info = await response.json()
+        document.querySelector("#title").textContent = info.title
+        document.querySelector("#subtitle").textContent = info.subtitle
+
       })
     </script>
 

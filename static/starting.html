@@ -10,7 +10,7 @@
     <script src="moment.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', event => {
+      document.addEventListener('DOMContentLoaded', async event => {
 
         // highlight the code
         document.querySelectorAll('code').forEach(block => {
@@ -32,8 +32,13 @@
           } else {
             timer.textContent = "Starting Now!"
           }
-          console.log(now, topOfHour)
         }
+
+        // update the title and subtitle
+        let response = await fetch('/api/stream-info')
+        let info = await response.json()
+        document.querySelector("header > h1").textContent = info.title
+        document.querySelector("header > h2").textContent = info.subtitle
 
       })
     </script>
